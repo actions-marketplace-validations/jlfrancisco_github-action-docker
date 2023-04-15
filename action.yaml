@@ -1,0 +1,19 @@
+name: 'Github with Docker'
+description: ''
+author: 'Jean Luc SEMEDO'
+inputs:
+  param1:
+    description: Param 1
+    required: true 
+  param2:
+    description: Param 2
+    required: true 
+runs:
+  using: 'docker'
+  image: 'jeanlucsemedo/script:1.0'
+  args:
+  - ${{inputs.param1}}
+  - ${{inputs.param2}}
+outputs:
+  result:
+    description: 'Resultat'
